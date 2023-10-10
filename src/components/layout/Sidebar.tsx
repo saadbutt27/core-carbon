@@ -65,8 +65,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         }`}
       >
         <div className="flex justify-between items-center mb-4">
-          <div className="text-black text-xl">
-            <Link href={"#"}>CoreCarbonCanada</Link>
+          <div className="text-black font-bold text-2xl">
+            <Link href={"#"}>CoreCarbonC</Link>
           </div>
           <div className="flex justify-end">
             <button onClick={() => onClose(true)}>
@@ -89,7 +89,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   {navigationList[0].dropdownList?.map((item, index) => (
                     <li
                       key={index}
-                      className="text-center text-sm px-1 py-2 shrink-0 hover:bg-slate-300 duration-200"
+                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
                     >
                       {item}
                     </li>
@@ -110,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   {navigationList[1].dropdownList?.map((item, index) => (
                     <li
                       key={index}
-                      className="text-center text-sm px-1 py-2 shrink-0 hover:bg-slate-300 duration-200"
+                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
                     >
                       {item}
                     </li>
@@ -137,7 +137,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   {navigationList[4].dropdownList?.map((item, index) => (
                     <li
                       key={index}
-                      className="text-center text-sm px-1 py-2 shrink-0 hover:bg-slate-300 duration-200"
+                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
                     >
                       {item}
                     </li>
