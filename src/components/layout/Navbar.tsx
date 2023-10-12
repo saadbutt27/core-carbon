@@ -77,9 +77,9 @@ export default function Navbar() {
 
   return (
     <>
-      <header>
+      <header className="sticky top-0 z-50">
         <nav
-          className={`py-4 px-10 h-auto backdrop-blur-md bg-white bg-opacity-90 p-4 sticky top-0 z-50 shadow-lg`}
+          className={`py-4 px-10 h-auto backdrop-blur-md bg-white bg-opacity-90 shadow-lg`}
         >
           <div className="container mx-auto flex justify-between items-center">
             <div className="text-black font-bold text-2xl">
