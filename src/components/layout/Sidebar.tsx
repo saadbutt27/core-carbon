@@ -60,17 +60,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 h-screen w-full sm:w-2/5 bg-white text-black z-50 p-4 transform transition duration-500 shadow-lg ${
+        className={`fixed top-0 left-0 h-screen w-full sm:w-2/5 bg-white text-gray-950 z-50 p-4 transform transition duration-500 shadow-lg ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center mb-4">
-          <div className="text-black font-bold text-2xl">
+          <div className="text-gray-950 font-bold text-2xl">
             <Link href={"#"}>CoreCarbonC</Link>
           </div>
           <div className="flex justify-end">
             <button onClick={() => onClose(true)}>
-              <X className="text-black" />
+              <X
+                className="text-gray-950
+              "
+              />
             </button>
           </div>
         </div>

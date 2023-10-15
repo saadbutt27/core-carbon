@@ -82,14 +82,14 @@ export default function Navbar() {
           className={`py-4 px-10 h-auto backdrop-blur-md bg-white bg-opacity-90 shadow-lg`}
         >
           <div className="container mx-auto flex justify-between items-center">
-            <div className="text-black font-bold text-2xl">
+            <div className="text-bg-gray-900 font-bold text-2xl">
               <Link href={"#"}>CoreCarbonC</Link>
             </div>
 
             {/* Hamburger menu for small screens */}
             <div className="block lg:hidden">
               <button onClick={() => setIsSidebarOpen(true)}>
-                <MenuIcon className="text-black" />
+                <MenuIcon className="text-bg-gray-900" />
               </button>
             </div>
 
