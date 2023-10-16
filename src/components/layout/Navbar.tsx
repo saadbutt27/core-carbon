@@ -83,7 +83,7 @@ export default function Navbar() {
         >
           <div className="flex justify-between items-center">
             <div className="text-bg-gray-900 font-bold text-2xl">
-              <Link href={"#"}>CoreCarbonC</Link>
+              <Link href={"/"}>CoreCarbonC</Link>
             </div>
 
             {/* Hamburger menu for small screens */}
@@ -98,7 +98,7 @@ export default function Navbar() {
               <ul className="relative flex space-x-8 sm:space-x-12 text-lg font-medium text-gray-700">
                 <li className="group relative cursor-pointer select-none">
                   <div className="flex gap-x-1 items-center hover:text-blue-500">
-                    <Link href={"/"}>Services</Link>
+                    <Link href={"#"}>Services</Link>
                     <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
                   </div>
                   <div className="sm:min-w-0 absolute left-3/4">
@@ -120,7 +120,7 @@ export default function Navbar() {
                 </li>
                 <li className="group relative cursor-pointer select-none">
                   <div className="flex gap-x-1 items-center hover:text-blue-500">
-                    <Link href={"/"}>Sectors</Link>
+                    <Link href={"#"}>Sectors</Link>
                     <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
                   </div>
                   <div className="sm:min-w-0 absolute left-3/4">
@@ -148,7 +148,7 @@ export default function Navbar() {
                 </li>
                 <li className="group relative cursor-pointer select-none">
                   <div className="flex gap-x-1 items-center hover:text-blue-500">
-                    <Link href={"/"}>About</Link>
+                    <Link href={"/about"}>About</Link>
                     <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
                   </div>
                   <div className="sm:min-w-0 absolute left-3/4">

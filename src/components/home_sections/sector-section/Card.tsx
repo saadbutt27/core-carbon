@@ -12,7 +12,7 @@ export default function Card({
   text: string | undefined;
 }) {
   return (
-    <div className="group flex flex-col items-center justify-center gap-y-4 p-6 hover:border hover:shadow-lg duration-300 border-b-2">
+    <div className="group flex flex-col items-center justify-center gap-y-4 p-6 shadow-lg duration-300">
       <Image
         src={imageSrc.src}
         alt={title}

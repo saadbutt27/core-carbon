@@ -66,7 +66,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       >
         <div className="flex justify-between items-center mb-4">
           <div className="text-gray-950 font-bold text-2xl">
-            <Link href={"#"}>CoreCarbonC</Link>
+            <Link href={"/"}>CoreCarbonC</Link>
           </div>
           <div className="flex justify-end">
             <button onClick={() => onClose(true)}>
@@ -81,7 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <ul className="flex flex-col items-center space-y-8 sm:space-y-10 text-lg font-medium text-gray-700">
             <li className="group cursor-pointer select-none">
               <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
-                <Link href={"/"}>Services</Link>
+                <Link href={"#"}>Services</Link>
                 <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
               </div>
               <div className="sm:min-w-0">
@@ -102,7 +102,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </li>
             <li className="group cursor-pointer select-none">
               <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
-                <Link href={"/"}>Sectors</Link>
+                <Link href={"#"}>Sectors</Link>
                 <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
               </div>
               <div className="sm:min-w-0">
@@ -129,7 +129,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </li>
             <li className="group cursor-pointer select-none">
               <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
-                <Link href={"/"}>About</Link>
+                <Link href={"/about"}>About</Link>
                 <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
               </div>
               <div className="sm:min-w-0">
