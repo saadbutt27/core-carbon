@@ -77,30 +77,30 @@ export default function Hero({
       >
         <motion.h2
           variants={child}
-          className="text-3xl sm:text-5xl lg:text-7xl font-bold text-center text-stroke text-stroke-blue"
+          className="text-4xl sm:text-5xl lg:text-7xl font-bold text-center text-slate-50"
         >
-          Climate change is ineveitable.
+          Climate change is unavoidable.
         </motion.h2>
-        <motion.p variants={child} className="text-xl font-bold tracking-wider">
+        <motion.p variants={child} className="text-xl text-slate-50 font-bold tracking-wider">
           Stay ahead of it.
         </motion.p>
-        <Link href={"/"}>
+        <Link href={"/"} className="group">
           <motion.button
             variants={child}
-            className="bg-bg-gray-900 text-white text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide hover:scale-105 duration-300"
+            className="bg-gray-950 text-slate-50 text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide group-hover:scale-110 duration-300"
           >
-            Let&apos; Work Together
+            Let&apos;s Work Together
           </motion.button>
         </Link>
         <ChevronLeft
           onClick={handlePrevImage}
-          className="absolute left-10 cursor-pointer hover:-translate-x-1 duration-300"
+          className="text-slate-50 absolute left-10 cursor-pointer hover:-translate-x-1 duration-300"
           aria-label={`Previous Iamge Button`}
 
         />
         <ChevronRight
           onClick={handleNextImage}
-          className="absolute right-10 cursor-pointer hover:translate-x-1 duration-300"
+          className="text-slate-50 absolute right-10 cursor-pointer hover:translate-x-1 duration-300"
           aria-label={`Next Image Button`}
         />
       </motion.div>

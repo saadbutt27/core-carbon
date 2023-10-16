@@ -41,7 +41,7 @@ export default function Program() {
             exchange is challenging. We&apos;re here to help.
           </p>
           <Link href={"/"}>
-            <button className="bg-gray-900 text-white text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide hover:scale-105 duration-300">
+            <button className="bg-gray-900 text-slate-50 text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide hover:scale-105 duration-300">
               Learn more about our programs
             </button>
           </Link>

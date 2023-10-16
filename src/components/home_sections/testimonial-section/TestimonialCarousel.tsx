@@ -35,7 +35,7 @@ export default function TestimonialCarousel() {
           transition={{ duration: 0.5 }}
           className="flex flex-col justify-center items-center gap-y-6"
         >
-          <p className="italic font-semibold text-2xl text-center tracking-wider">
+          <p className="italic font-semibold text-lg md:text-2xl text-center tracking-wider">
             &quot;{testimonials[currentTestimonial].remarks}&quot;
           </p>
           <p>{testimonials[currentTestimonial].position}</p>

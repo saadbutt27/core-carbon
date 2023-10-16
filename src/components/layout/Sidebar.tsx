@@ -60,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 h-screen w-full sm:w-2/5 bg-white text-gray-950 z-50 p-4 transform transition duration-500 shadow-lg ${
+        className={`fixed top-0 left-0 h-screen w-full sm:w-2/5 bg-slate-50 text-gray-950 z-50 p-4 transform transition duration-500 shadow-lg ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -87,7 +87,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="sm:min-w-0">
                 <ul
                   className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-64 md:w-80 overflow-hidden 
-                       duration-500 bg-white font-normal rounded-md px-1 cursor-pointer"
+                       duration-500 bg-slate-50 font-normal rounded-md px-1 cursor-pointer"
                 >
                   {navigationList[0].dropdownList?.map((item, index) => (
                     <li
@@ -108,7 +108,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="sm:min-w-0">
                 <ul
                   className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-64 md:w-80 overflow-hidden 
-                       duration-500 bg-white font-normal rounded-md px-1 cursor-pointer"
+                       duration-500 bg-slate-50 font-normal rounded-md px-1 cursor-pointer"
                 >
                   {navigationList[1].dropdownList?.map((item, index) => (
                     <li
@@ -135,7 +135,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="sm:min-w-0">
                 <ul
                   className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-64 md:w-80 overflow-hidden 
-                       duration-500 bg-white font-normal rounded-md px-1 cursor-pointer"
+                       duration-500 bg-slate-50 font-normal rounded-md px-1 cursor-pointer"
                 >
                   {navigationList[4].dropdownList?.map((item, index) => (
                     <li

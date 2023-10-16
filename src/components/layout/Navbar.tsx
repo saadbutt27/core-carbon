@@ -79,7 +79,7 @@ export default function Navbar() {
     <>
       <header className="sticky top-0 z-50">
         <nav
-          className={`py-4 px-10 h-auto backdrop-blur-md bg-white bg-opacity-90 shadow-lg`}
+          className={`py-4 px-10 h-auto backdrop-blur-md bg-slate-50 bg-opacity-90 shadow-lg`}
         >
           <div className="flex justify-between items-center">
             <div className="text-bg-gray-900 font-bold text-2xl">
@@ -104,7 +104,7 @@ export default function Navbar() {
                   <div className="sm:min-w-0 absolute left-3/4">
                     <ul
                       className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-52 overflow-hidden 
-                   duration-500 bg-white text-xs sm:text-base font-normal rounded-md
+                   duration-500 bg-slate-50 text-xs sm:text-base font-normal rounded-md
                    group-hover:shadow-md px-1 group-hover:border border-transparent group-hover:border-slate-200 cursor-pointer"
                     >
                       {navigationList[0].dropdownList?.map((item, index) => (
@@ -126,7 +126,7 @@ export default function Navbar() {
                   <div className="sm:min-w-0 absolute left-3/4">
                     <ul
                       className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-64 overflow-hidden 
-                   duration-500 bg-white text-xs sm:text-base font-normal rounded-md
+                   duration-500 bg-slate-50 text-xs sm:text-base font-normal rounded-md
                    group-hover:shadow-md px-1 group-hover:border border-transparent group-hover:border-slate-200 cursor-pointer"
                     >
                       {navigationList[1].dropdownList?.map((item, index) => (
@@ -154,7 +154,7 @@ export default function Navbar() {
                   <div className="sm:min-w-0 absolute left-3/4">
                     <ul
                       className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-48 overflow-hidden 
-                   duration-500 bg-white text-xs sm:text-base font-normal rounded-md
+                   duration-500 bg-slate-50 text-xs sm:text-base font-normal rounded-md
                    group-hover:shadow-md px-1 group-hover:border border-transparent group-hover:border-slate-200 cursor-pointer"
                     >
                       {navigationList[4].dropdownList?.map((item, index) => (

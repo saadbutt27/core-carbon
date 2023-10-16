@@ -14,7 +14,7 @@ export default function Project({
   text: string;
 }) {
   return (
-    <div className="border bg-white shadow-md">
+    <div className="border bg-slate-50 shadow-md">
       <Image
         src={imageSrc.src}
         alt={title}

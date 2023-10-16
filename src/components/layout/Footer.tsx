@@ -46,8 +46,8 @@ const navigationList = [
 
 export default function Footer() {
   return (
-    <footer className="bg-green-100 px-10 py-20">
-      <div className="grid md:grid-cols-2 lg:grid-cols-[auto,1fr,1fr,1fr] md:justify-items-center gap-12">
+    <footer className="bg-green-100">
+      <div className="grid md:grid-cols-2 lg:grid-cols-[auto,1fr,1fr,1fr] md:justify-items-center gap-12 px-10 py-20">
         <div className="flex justify-center lg:items-start items-center text-gray-950 text-3xl font-bold">
           <Link href={"#"}>CoreCarbonC</Link>
         </div>
