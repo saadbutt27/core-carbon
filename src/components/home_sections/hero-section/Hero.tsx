@@ -89,7 +89,7 @@ export default function Hero({
             variants={child}
             className="bg-bg-gray-900 text-white text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide hover:scale-105 duration-300"
           >
-            Let's Work Together
+            Let&apos; Work Together
           </motion.button>
         </Link>
         <ChevronLeft

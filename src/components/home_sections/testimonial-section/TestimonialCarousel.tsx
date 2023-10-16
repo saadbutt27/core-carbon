@@ -36,7 +36,7 @@ export default function TestimonialCarousel() {
           className="flex flex-col justify-center items-center gap-y-6"
         >
           <p className="italic font-semibold text-2xl text-center tracking-wider">
-            "{testimonials[currentTestimonial].remarks}"
+            &quot;{testimonials[currentTestimonial].remarks}&quot;
           </p>
           <p>{testimonials[currentTestimonial].position}</p>
           <p className="text-gray-500">

@@ -38,7 +38,7 @@ export default function Program() {
           <p className="text-2xl italic leading-10 font-thin">
             Accomplishing a Net Zero status - when your carbon emissions are
             replaced by elimination of carbon by sustainable practices or
-            exchange is challenging. We're here to help.
+            exchange is challenging. We&apos;re here to help.
           </p>
           <Link href={"/"}>
             <button className="bg-gray-900 text-white text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide hover:scale-105 duration-300">
