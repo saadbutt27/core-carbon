@@ -81,7 +81,7 @@ export default function Navbar() {
         <nav
           className={`py-4 px-10 h-auto backdrop-blur-md bg-white bg-opacity-90 shadow-lg`}
         >
-          <div className="container mx-auto flex justify-between items-center">
+          <div className="flex justify-between items-center">
             <div className="text-bg-gray-900 font-bold text-2xl">
               <Link href={"#"}>CoreCarbonC</Link>
             </div>

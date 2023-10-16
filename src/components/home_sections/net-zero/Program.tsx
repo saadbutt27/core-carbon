@@ -31,7 +31,7 @@ export default function Program() {
   ];
   return (
     <section className="py-4 px-10 mb-20">
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col gap-y-6">
           <p>Climate Change</p>
           <h1 className="text-6xl font-semibold">Achieve Net Zero</h1>
@@ -46,7 +46,7 @@ export default function Program() {
             </button>
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {cardDetails.map((card) => (
             <Card
               key={card.imagesrc.src}

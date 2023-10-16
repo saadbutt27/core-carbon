@@ -12,7 +12,7 @@ export default function Card({
   text: string | undefined;
 }) {
   return (
-    <div className="group flex flex-col items-center justify-center gap-y-4 p-6 hover:border hover:shadow-lg duration-300">
+    <div className="group flex flex-col items-center justify-center gap-y-4 p-6 hover:border hover:shadow-lg duration-300 border-b-2">
       <Image
         src={imageSrc.src}
         alt={title}
@@ -21,7 +21,7 @@ export default function Card({
         className="group-hover:scale-110 duration-300"
       />
       <h3 className="text-lg font-semibold text-center">{title}</h3>
-      {!text &&<p className="text-center text-sm font-light">{text}</p>}
+      {text &&<p className="text-center text-sm font-light">{text}</p>}
     </div>
   );
 }

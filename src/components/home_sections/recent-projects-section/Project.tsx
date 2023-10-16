@@ -20,7 +20,7 @@ export default function Project({
         alt={title}
         width={500}
         height={500}
-        className="group-hover:scale-110 duration-300"
+        className="group-hover:scale-110 duration-300 w-auto"
       />
       <div className="flex flex-col gap-y-4 p-10 ">
         <Link href={"/"} className="hover:text-green-400 duration-300">
@@ -29,13 +29,7 @@ export default function Project({
         <Link href={"/"}>
           {" "}
           <h3
-            className="text-2xl leading-8 truncate overflow-ellipsis hover:text-green-400 duration-300"
-            // style={{
-            //   display: "-webkit-box",
-            //   WebkitLineClamp: 2,
-            //   WebkitBoxOrient: "horizontal",
-            // }}
-          >
+            className="text-2xl leading-8 truncate overflow-ellipsis hover:text-green-400 duration-300">
             Protecting Natural Resources and Ensuring Food Security with
             Nature-Based Solutions
           </h3>
