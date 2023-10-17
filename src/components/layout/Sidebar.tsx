@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { X } from "lucide-react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
+import Logo from "public/logo1.png";
 
 type NavListItem = {
   listTitle: string;
@@ -69,7 +71,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       >
         <div className="flex justify-between items-center mb-4">
           <div className="text-gray-950 font-bold text-2xl">
-            <Link href={"/"} onClick={handleLinkClick}>CoreCarbonC</Link>
+            <Link href={"/"} onClick={handleLinkClick} className="flex items-center">
+              <Image src={Logo} alt="Core Carbon Logo" height={50} width={50} />
+              <span className="-mb-4">oreCarbon</span>
+            </Link>
           </div>
           <div className="flex justify-end">
             <button onClick={() => onClose(true)}>
@@ -125,14 +130,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             </li>
             <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"/projects"} onClick={handleLinkClick}>Projects</Link>
+              <Link href={"/projects"} onClick={handleLinkClick}>
+                Projects
+              </Link>
             </li>
             <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"/resources"} onClick={handleLinkClick}>Resources</Link>
+              <Link href={"/resources"} onClick={handleLinkClick}>
+                Resources
+              </Link>
             </li>
             <li className="group cursor-pointer select-none">
               <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
-                <Link href={"/about"} onClick={handleLinkClick}>About</Link>
+                <Link href={"/about"} onClick={handleLinkClick}>
+                  About
+                </Link>
                 {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" /> */}
               </div>
               {/* <div className="sm:min-w-0">
@@ -152,7 +163,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div> */}
             </li>
             <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"/contact"} onClick={handleLinkClick}>Contact us</Link>
+              <Link href={"/contact"} onClick={handleLinkClick}>
+                Contact us
+              </Link>
             </li>
           </ul>
         </nav>

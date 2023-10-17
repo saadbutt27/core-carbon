@@ -3,6 +3,8 @@ import Link from "next/link";
 import { LinkedinIcon } from "lucide-react";
 import { TwitterIcon } from "lucide-react";
 import { YoutubeIcon } from "lucide-react";
+import Image from "next/image";
+import Logo from "public/logo1.png";
 
 const navigationList = [
   {
@@ -49,7 +51,10 @@ export default function Footer() {
     <footer className="bg-green-100">
       <div className="grid md:grid-cols-2 lg:grid-cols-[auto,1fr,1fr,1fr] md:justify-items-center gap-12 px-10 py-20">
         <div className="flex justify-center lg:items-start items-center text-gray-950 text-3xl font-bold">
-          <Link href={"#"}>CoreCarbonC</Link>
+          <Link href={"/"} className="flex items-center">
+            <Image src={Logo} alt="Core Carbon Logo" height={50} width={50} />
+            <span className="-mb-4">oreCarbon</span>
+          </Link>
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-2">

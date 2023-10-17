@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { ChevronDown, MenuIcon } from "lucide-react";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
+import Image from "next/image";
+import Logo from "public/logo1.png";
 
 const navigationList = [
   {
@@ -82,8 +84,11 @@ export default function Navbar() {
           className={`py-4 px-10 h-auto backdrop-blur-md bg-slate-50 bg-opacity-90 shadow-lg`}
         >
           <div className="flex justify-between items-center">
-            <div className="text-bg-gray-900 font-bold text-2xl">
-              <Link href={"/"}>CoreCarbonC</Link>
+            <div className="text-bg-gray-900 font-bold text-3xl">
+              <Link href={"/"} className="flex items-center">
+                <Image src={Logo} alt="Core Carbon Logo" height={50} width={50} />
+                <span className="-mb-4">oreCarbon</span>
+              </Link>
             </div>
 
             {/* Hamburger menu for small screens */}
