@@ -57,6 +57,9 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const handleLinkClick = () => {
+    onClose(false); // Close the sidebar when a link is clicked
+  };
   return (
     <>
       <header
@@ -66,7 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       >
         <div className="flex justify-between items-center mb-4">
           <div className="text-gray-950 font-bold text-2xl">
-            <Link href={"/"}>CoreCarbonC</Link>
+            <Link href={"/"} onClick={handleLinkClick}>CoreCarbonC</Link>
           </div>
           <div className="flex justify-end">
             <button onClick={() => onClose(true)}>
@@ -122,17 +125,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             </li>
             <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"#"}>Projects</Link>
+              <Link href={"/projects"} onClick={handleLinkClick}>Projects</Link>
             </li>
             <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"#"}>Resources</Link>
+              <Link href={"/resources"} onClick={handleLinkClick}>Resources</Link>
             </li>
             <li className="group cursor-pointer select-none">
               <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
-                <Link href={"/about"}>About</Link>
-                <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
+                <Link href={"/about"} onClick={handleLinkClick}>About</Link>
+                {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" /> */}
               </div>
-              <div className="sm:min-w-0">
+              {/* <div className="sm:min-w-0">
                 <ul
                   className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-64 md:w-80 overflow-hidden 
                        duration-500 bg-slate-50 font-normal rounded-md px-1 cursor-pointer"
@@ -146,10 +149,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </li>
             <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"#"}>Contact us</Link>
+              <Link href={"/contact"} onClick={handleLinkClick}>Contact us</Link>
             </li>
           </ul>
         </nav>

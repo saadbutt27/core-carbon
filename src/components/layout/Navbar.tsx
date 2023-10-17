@@ -98,7 +98,9 @@ export default function Navbar() {
               <ul className="relative flex space-x-8 sm:space-x-12 text-lg font-medium text-gray-700">
                 <li className="group relative cursor-pointer select-none">
                   <div className="flex gap-x-1 items-center hover:text-blue-500">
-                    <Link href={"#"}>Services</Link>
+                    <Link href={"#"} className="active:text-blue-500">
+                      Services
+                    </Link>
                     <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
                   </div>
                   <div className="sm:min-w-0 absolute left-3/4">
@@ -141,17 +143,17 @@ export default function Navbar() {
                   </div>
                 </li>
                 <li className="hover:text-blue-500 duration-200 select-none">
-                  <Link href={"#"}>Projects</Link>
+                  <Link href={"/projects"}>Projects</Link>
                 </li>
                 <li className="hover:text-blue-500 duration-200 select-none">
-                  <Link href={"#"}>Resources</Link>
+                  <Link href={"/resources"}>Resources</Link>
                 </li>
                 <li className="group relative cursor-pointer select-none">
                   <div className="flex gap-x-1 items-center hover:text-blue-500">
                     <Link href={"/about"}>About</Link>
-                    <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
+                    {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" /> */}
                   </div>
-                  <div className="sm:min-w-0 absolute left-3/4">
+                  {/* <div className="sm:min-w-0 absolute left-3/4">
                     <ul
                       className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-48 overflow-hidden 
                    duration-500 bg-slate-50 text-xs sm:text-base font-normal rounded-md
@@ -166,10 +168,10 @@ export default function Navbar() {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </div> */}
                 </li>
                 <li className="hover:text-blue-500 duration-200 select-none">
-                  <Link href={"#"}>Contact us</Link>
+                  <Link href={"/contact"}>Contact us</Link>
                 </li>
               </ul>
             </nav>
