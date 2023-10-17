@@ -5,7 +5,7 @@ import TestimonialCarousel from "./TestimonialCarousel";
 
 export default function Testimonials() {
   return (
-    <section className="py-4 mb-20 h-screen">
+    <section className="mb-20 2xl:mb-32 h-screen">
       <div
         style={{
           backgroundImage: `url('${TetimonaialBG.src}')`,
