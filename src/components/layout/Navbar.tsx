@@ -5,6 +5,7 @@ import Link from "next/link";
 import Sidebar from "./Sidebar";
 import Image from "next/image";
 import Logo from "public/logo1.png";
+import { usePathname } from "next/navigation";
 
 const navigationList = [
   {
@@ -48,6 +49,7 @@ const navigationList = [
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -102,11 +104,11 @@ export default function Navbar() {
             <nav className="hidden lg:block">
               <ul className="relative flex space-x-8 sm:space-x-12 text-lg font-medium text-gray-700">
                 <li className="group relative cursor-pointer select-none">
-                  <div className="flex gap-x-1 items-center hover:text-blue-500">
-                    <Link href={"#"} className="active:text-blue-500">
+                  <div className="flex gap-x-1 items-center hover:text-[#009f7f]">
+                    <Link href={"#"} className="active:text-[#009f7f]">
                       Services
                     </Link>
-                    <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
+                    <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" />
                   </div>
                   <div className="sm:min-w-0 absolute left-3/4">
                     <ul
@@ -117,7 +119,7 @@ export default function Navbar() {
                       {navigationList[0].dropdownList?.map((item, index) => (
                         <li
                           key={index}
-                          className="px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
+                          className="px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                         >
                           {item}
                         </li>
@@ -126,9 +128,9 @@ export default function Navbar() {
                   </div>
                 </li>
                 <li className="group relative cursor-pointer select-none">
-                  <div className="flex gap-x-1 items-center hover:text-blue-500">
+                  <div className="flex gap-x-1 items-center hover:text-[#009f7f]">
                     <Link href={"#"}>Sectors</Link>
-                    <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
+                    <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" />
                   </div>
                   <div className="sm:min-w-0 absolute left-3/4">
                     <ul
@@ -139,7 +141,7 @@ export default function Navbar() {
                       {navigationList[1].dropdownList?.map((item, index) => (
                         <li
                           key={index}
-                          className="px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
+                          className="px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                         >
                           {item}
                         </li>
@@ -147,16 +149,16 @@ export default function Navbar() {
                     </ul>
                   </div>
                 </li>
-                <li className="hover:text-blue-500 duration-200 select-none">
-                  <Link href={"/projects"}>Projects</Link>
+                <li className="hover:text-[#009f7f] duration-200 select-none">
+                  <Link href={"/projects"} className={`${pathname === "/projects" ? "text-[#009f7f]" : ""}`}>Projects</Link>
                 </li>
-                <li className="hover:text-blue-500 duration-200 select-none">
-                  <Link href={"/resources"}>Resources</Link>
+                <li className="hover:text-[#009f7f] duration-200 select-none">
+                  <Link href={"/resources"} className={`${pathname === "/resources" ? "text-[#009f7f]" : ""}`}>Resources</Link>
                 </li>
                 <li className="group relative cursor-pointer select-none">
-                  <div className="flex gap-x-1 items-center hover:text-blue-500">
-                    <Link href={"/about"}>About</Link>
-                    {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" /> */}
+                  <div className="flex gap-x-1 items-center hover:text-[#009f7f]">
+                    <Link href={"/about"} className={`${pathname === "/about" ? "text-[#009f7f]" : ""}`}>About</Link>
+                    {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" /> */}
                   </div>
                   {/* <div className="sm:min-w-0 absolute left-3/4">
                     <ul
@@ -167,7 +169,7 @@ export default function Navbar() {
                       {navigationList[4].dropdownList?.map((item, index) => (
                         <li
                           key={index}
-                          className="px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
+                          className="px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                         >
                           {item}
                         </li>
@@ -175,8 +177,8 @@ export default function Navbar() {
                     </ul>
                   </div> */}
                 </li>
-                <li className="hover:text-blue-500 duration-200 select-none">
-                  <Link href={"/contact"}>Contact us</Link>
+                <li className="hover:text-[#009f7f] duration-200 select-none">
+                  <Link href={"/contact"} className={`${pathname === "/contact" ? "text-[#009f7f]" : ""}`}>Contact us</Link>
                 </li>
               </ul>
             </nav>

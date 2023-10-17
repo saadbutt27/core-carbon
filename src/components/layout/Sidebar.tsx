@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Logo from "public/logo1.png";
+import { usePathname } from "next/navigation";
 
 type NavListItem = {
   listTitle: string;
@@ -59,6 +60,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const pathname = usePathname();
   const handleLinkClick = () => {
     onClose(false); // Close the sidebar when a link is clicked
   };
@@ -71,7 +73,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       >
         <div className="flex justify-between items-center mb-4">
           <div className="text-gray-950 font-bold text-2xl">
-            <Link href={"/"} onClick={handleLinkClick} className="flex items-center">
+            <Link
+              href={"/"}
+              onClick={handleLinkClick}
+              className="flex items-center"
+            >
               <Image src={Logo} alt="Core Carbon Logo" height={50} width={50} />
               <span className="-mb-4">oreCarbon</span>
             </Link>
@@ -88,9 +94,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <nav className="mt-10">
           <ul className="flex flex-col items-center space-y-8 sm:space-y-10 text-lg font-medium text-gray-700">
             <li className="group cursor-pointer select-none">
-              <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
+              <div className="flex gap-x-1 justify-center items-center hover:text-[#009f7f]">
                 <Link href={"#"}>Services</Link>
-                <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
+                <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" />
               </div>
               <div className="sm:min-w-0">
                 <ul
@@ -100,7 +106,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   {navigationList[0].dropdownList?.map((item, index) => (
                     <li
                       key={index}
-                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
+                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                     >
                       {item}
                     </li>
@@ -109,9 +115,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             </li>
             <li className="group cursor-pointer select-none">
-              <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
+              <div className="flex gap-x-1 justify-center items-center hover:text-[#009f7f]">
                 <Link href={"#"}>Sectors</Link>
-                <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" />
+                <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" />
               </div>
               <div className="sm:min-w-0">
                 <ul
@@ -121,7 +127,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   {navigationList[1].dropdownList?.map((item, index) => (
                     <li
                       key={index}
-                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
+                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                     >
                       {item}
                     </li>
@@ -129,22 +135,36 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </ul>
               </div>
             </li>
-            <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"/projects"} onClick={handleLinkClick}>
+            <li className="hover:text-[#009f7f] duration-200 select-none">
+              <Link
+                href={"/projects"}
+                className={`${pathname === "/projects" ? "text-[#009f7f]" : ""}`}
+                onClick={handleLinkClick}
+              >
                 Projects
               </Link>
             </li>
-            <li className="hover:text-blue-500 duration-200 select-none">
-              <Link href={"/resources"} onClick={handleLinkClick}>
+            <li className="hover:text-[#009f7f] duration-200 select-none">
+              <Link
+                href={"/resources"}
+                className={`${
+                  pathname === "/resources" ? "text-[#009f7f]" : ""
+                }`}
+                onClick={handleLinkClick}
+              >
                 Resources
               </Link>
             </li>
             <li className="group cursor-pointer select-none">
-              <div className="flex gap-x-1 justify-center items-center hover:text-blue-500">
-                <Link href={"/about"} onClick={handleLinkClick}>
+              <div className="flex gap-x-1 justify-center items-center hover:text-[#009f7f]">
+                <Link
+                  href={"/about"}
+                  className={`${pathname === "/about" ? "text-[#009f7f]" : ""}`}
+                  onClick={handleLinkClick}
+                >
                   About
                 </Link>
-                {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-blue-500" /> */}
+                {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" /> */}
               </div>
               {/* <div className="sm:min-w-0">
                 <ul
@@ -154,7 +174,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   {navigationList[4].dropdownList?.map((item, index) => (
                     <li
                       key={index}
-                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-blue-500 duration-200"
+                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                     >
                       {item}
                     </li>
@@ -162,7 +182,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </ul>
               </div> */}
             </li>
-            <li className="hover:text-blue-500 duration-200 select-none">
+            <li className="hover:text-[#009f7f] duration-200 select-none">
               <Link href={"/contact"} onClick={handleLinkClick}>
                 Contact us
               </Link>
