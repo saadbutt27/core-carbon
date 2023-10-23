@@ -91,17 +91,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-2">Social Media</h3>
             <ul className="flex gap-x-5">
               <li className="group border border-gray-600 rounded-full p-2 hover:bg-gray-900 transition-colors duration-300">
-                <Link href={"#"}>
+                <Link href={"#"} target="_blank">
                   <LinkedinIcon className="group-hover:text-white" />
                 </Link>
               </li>
               <li className="group border border-gray-600 rounded-full p-2 hover:bg-gray-900 transition-colors duration-300">
-                <Link href={"#"}>
+                <Link href={"#"} target="_blank">
                   <TwitterIcon className="group-hover:text-white" />
                 </Link>
               </li>
               <li className="group border border-gray-600 rounded-full p-2 hover:bg-gray-950 transition-colors duration-300">
-                <Link href={"#"}>
+                <Link href={"#"} target="_blank">
                   <YoutubeIcon className="group-hover:text-white" />
                 </Link>
               </li>
