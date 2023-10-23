@@ -13,9 +13,9 @@ export default function Contact() {
       <Title imgSrc={TetimonaialBG} title="Contact" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-4 px-10 my-16 ">
-        <div className="flex flex-col justify-between items-start">
+        <div className="flex flex-col justify-between items-start gap-y-6">
           <div>
-            <h2 className="text-2xl md:text-4xl font-semibold mb-3">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-3">
               We&apos;re eager to collaborate with you.
             </h2>
             <p className="text-base md:text-xl">
@@ -26,7 +26,7 @@ export default function Contact() {
           <div>
             <span className="text-2xl font-semibold">Address:</span>{" "}
             <div className="mb-6 ml-4">
-              <address className="text-2xl">
+              <address className="text-lg lg:text-2xl">
                 25-5230 Gleb Erin Drive, Mississauga ON L5M5Z7, Canada
               </address>
               <Link
@@ -67,7 +67,7 @@ export default function Contact() {
 
         <form>
           <div className="grid md:grid-cols-2 md:gap-6 mb-10">
-            <div className="relative z-0 w-full group">
+            <div className="relative z-0 w-full group mb-10 md:mb-0">
               <input
                 type="text"
                 name="name"
@@ -83,7 +83,7 @@ export default function Contact() {
                 Name
               </label>
             </div>
-            <div className="relative z-0 w-full group">
+            <div className="relative z-0 w-full group md:mb-0">
               <input
                 type="text"
                 name="company_name"
@@ -101,7 +101,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 md:gap-6 mb-10">
-            <div className="relative z-0 w-full group">
+            <div className="relative z-0 w-full group mb-10 md:mb-0">
               <select
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 dark:text-white dark:border-gray-600 dark:focus:border-[#009f7f] focus:outline-none focus:ring-0 focus:border-[#009f7f] peer"
                 required
