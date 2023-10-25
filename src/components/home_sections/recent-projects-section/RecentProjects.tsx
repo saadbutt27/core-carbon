@@ -26,7 +26,7 @@ export default function RecentProjects() {
   // ];
   return (
     <section className="py-28 px-10 mb-20 bg-cyan-100">
-      <h1 className="text-5xl md:text-7xl text-center">
+      <h1 className="text-4xl sm:text-5xl md:text-7xl text-center">
         Our Recent Impact-Focused Projects
       </h1>
       {/* <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-20 gap-y-10 mt-10"> */}
@@ -38,7 +38,7 @@ export default function RecentProjects() {
             text={project.text}
           />
         ))} */}
-      <div className="flex items-center justify-between gap-x-3.5 mt-12">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-x-3.5 gap-y-3.5 lg:gap-y-0 mt-12">
         <Image
           src={Project1.src}
           alt={"Brick Kiln"}

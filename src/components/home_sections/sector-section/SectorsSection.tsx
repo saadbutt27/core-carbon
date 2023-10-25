@@ -43,7 +43,7 @@ export default function SectorsSection() {
   ];
   return (
     <section className="py-4 px-10 mb-20">
-      <h1 className="text-5xl md:text-7xl text-center">Sectors we serve</h1>
+      <h1 className="text-4xl sm:text-5xl md:text-7xl text-center">Sectors we serve</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-20 gap-y-10 mt-10">
         {cardDetails.map((card) => (
           <Card
