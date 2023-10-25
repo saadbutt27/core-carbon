@@ -9,7 +9,7 @@ export default function Card({
 }: {
   imageSrc: StaticImageData;
   title: string;
-  text: string | undefined;
+  text?: string;
 }) {
   return (
     <div className="group flex flex-col items-center justify-center gap-y-4 p-6 shadow-lg duration-300">
@@ -21,7 +21,7 @@ export default function Card({
         className="group-hover:scale-110 duration-300"
       />
       <h3 className="text-lg font-semibold text-center">{title}</h3>
-      {text &&<p className="text-center text-sm font-light">{text}</p>}
+      {text && <p className="text-center text-sm font-light">{text}</p>}
     </div>
   );
 }

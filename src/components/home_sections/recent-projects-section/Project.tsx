@@ -23,23 +23,22 @@ export default function Project({
         className="group-hover:scale-110 duration-300 max-w-full h-80"
       />
       <div className="flex flex-col gap-y-4 p-10 ">
-        <Link href={"/"} className="hover:text-green-400 duration-300">
+        <Link href={"/"} className="hover:text-[#009f7f] duration-300">
           <h4>Sustainable Stratergies</h4>
         </Link>
         <Link href={"/"}>
           {" "}
-          <h3
-            className="text-2xl leading-8 truncate overflow-ellipsis hover:text-green-400 duration-300">
+          <h3 className="text-2xl leading-8 truncate overflow-ellipsis hover:text-[#009f7f] duration-300">
             Protecting Natural Resources and Ensuring Food Security with
             Nature-Based Solutions
           </h3>
         </Link>
         <Link
-          href={"/"}
-          className="flex items-center gap-x-1.5 text-sm mt-10 group hover:text-green-400 duration-300"
+          href={""}
+          className="flex items-center gap-x-1.5 text-sm mt-10 group hover:text-[#009f7f] duration-300"
         >
           Read more{" "}
-          <ChevronRightCircleIcon className="group-hover:translate-x-1 group-hover:text-green-400 duration-300 w-5 h-5 text-gray-400" />
+          <ChevronRightCircleIcon className="group-hover:translate-x-1 group-hover:text-[#009f7f] duration-300 w-5 h-5 text-gray-400" />
         </Link>
       </div>
     </div>

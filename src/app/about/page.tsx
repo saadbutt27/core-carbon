@@ -1,10 +1,11 @@
 import React from "react";
 import TetimonaialBG from "public/images/tetimonial_image.webp";
 import Title from "@/components/reusable/Title";
+import Team from "./components/Team";
 
 export default function About() {
   return (
-    <section>
+    <section className="mb-20">
       <Title
         imgSrc={TetimonaialBG}
         title="About Core Carbon Canada"
@@ -112,6 +113,7 @@ export default function About() {
           </li>
         </ul>
       </div>
+      <Team />
     </section>
   );
 }

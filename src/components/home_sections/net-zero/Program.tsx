@@ -34,7 +34,9 @@ export default function Program() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="flex flex-col gap-y-6">
           <p>Climate Change</p>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold">Achieve Net Zero</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold">
+            Achieve Net Zero
+          </h1>
           <p className="text-2xl italic leading-10 font-thin">
             Accomplishing a Net Zero status - when your carbon emissions are
             replaced by elimination of carbon by sustainable practices or
@@ -52,7 +54,6 @@ export default function Program() {
               key={card.imagesrc.src}
               imageSrc={card.imagesrc}
               title={card.title}
-              text={undefined}
             />
           ))}
         </div>
