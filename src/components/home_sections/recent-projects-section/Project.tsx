@@ -19,8 +19,8 @@ export default function Project({
         src={imageSrc.src}
         alt={title}
         width={500}
-        height={500}
-        className="group-hover:scale-110 duration-300 w-auto"
+        height={100}
+        className="group-hover:scale-110 duration-300 max-w-full h-80"
       />
       <div className="flex flex-col gap-y-4 p-10 ">
         <Link href={"/"} className="hover:text-green-400 duration-300">
