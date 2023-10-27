@@ -5,54 +5,7 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Logo from "public/logo1.png";
 import { usePathname } from "next/navigation";
-
-type NavListItem = {
-  listTitle: string;
-  dropdownList: string[] | undefined;
-};
-
-const navigationList: NavListItem[] = [
-  {
-    listTitle: "Services",
-    dropdownList: [
-      "Advisory Services",
-      "Asset Management",
-      "Audit",
-      "Planning",
-      "Digital",
-    ],
-  },
-  {
-    listTitle: "Sectors",
-    dropdownList: [
-      "Energy",
-      "Water and Waste Water",
-      "Forsetry and Biodiversity",
-      "Agriculture",
-      "Capacity Development",
-      "Carbon",
-      "Plastic",
-      "The Blue Economy",
-      "Fashion and Textile",
-    ],
-  },
-  {
-    listTitle: "Projects",
-    dropdownList: undefined,
-  },
-  {
-    listTitle: "Resources",
-    dropdownList: undefined,
-  },
-  {
-    listTitle: "About",
-    dropdownList: ["Profile", "Team", "Events and News", "Careers"],
-  },
-  {
-    listTitle: "Contact us",
-    dropdownList: undefined,
-  },
-];
+import { navigationList } from "@/lib/navList";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -67,12 +20,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 h-screen w-full sm:w-2/5 bg-slate-50 text-gray-950 z-50 p-4 transform transition duration-500 shadow-lg ${
+        className={`block lg:hidden fixed top-0 left-0 h-screen w-full sm:w-2/5 bg-slate-50 text-gray-950 z-50 p-4 transform transition duration-500 shadow-lg ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center mb-4">
-          <div className="text-gray-950 font-bold text-2xl">
+          <div className="text-gray-950 font-bold text-2xl select-none">
             <Link
               href={"/"}
               onClick={handleLinkClick}
@@ -108,7 +61,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       key={index}
                       className="text-center text-sm px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                     >
-                      {item}
+                      {typeof item === "object" ? (
+                        <Link
+                          href={`/services/${item.path}`}
+                          className={`${
+                            pathname === `/services/${item.path}`
+                              ? "text-[#009f7f]"
+                              : ""
+                          }`}
+                        >
+                          {item.title}
+                        </Link>
+                      ) : (
+                        <Link href={`/`}>{item}</Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -129,20 +95,24 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       key={index}
                       className="text-center text-sm px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                     >
-                      {item}
+                      {typeof item === "object" ? (
+                        <Link
+                          href={`/sectors/${item.path}`}
+                          className={`${
+                            pathname === `/sectors/${item.path}`
+                              ? "text-[#009f7f]"
+                              : ""
+                          }`}
+                        >
+                          {item.title}
+                        </Link>
+                      ) : (
+                        <Link href={`/`}>{item}</Link>
+                      )}
                     </li>
                   ))}
                 </ul>
               </div>
-            </li>
-            <li className="hover:text-[#009f7f] duration-200 select-none">
-              <Link
-                href={"/projects"}
-                className={`${pathname === "/projects" ? "text-[#009f7f]" : ""}`}
-                onClick={handleLinkClick}
-              >
-                Projects
-              </Link>
             </li>
             <li className="hover:text-[#009f7f] duration-200 select-none">
               <Link

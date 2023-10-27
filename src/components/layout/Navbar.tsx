@@ -6,46 +6,8 @@ import Sidebar from "./Sidebar";
 import Image from "next/image";
 import Logo from "public/logo1.png";
 import { usePathname } from "next/navigation";
-
-const navigationList = [
-  {
-    listTitle: "Services",
-    dropdownList: [
-      "Advisory Services",
-      "Asset Management",
-      "Audit",
-      "Planning",
-      "Digital",
-    ],
-  },
-  {
-    listTitle: "Sectors",
-    dropdownList: [
-      "Energy",
-      "Water and Waste Water",
-      "Forsetry and Biodiversity",
-      "Agriculture",
-      "Capacity Development",
-      "Carbon",
-      "Plastic",
-      "The Blue Economy",
-      "Fashion and Textile",
-    ],
-  },
-  {
-    listTitle: "Projects",
-  },
-  {
-    listTitle: "Resources",
-  },
-  {
-    listTitle: "About",
-    dropdownList: ["Profile", "Team", "Events and News", "Careers"],
-  },
-  {
-    listTitle: "Contact us",
-  },
-];
+import Wrapper from "../reusable/Wrapper";
+import { navigationList } from "@/lib/navList";
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -80,15 +42,20 @@ export default function Navbar() {
   };
 
   return (
-    <>
+    <Wrapper>
       <header className="sticky top-0 z-50">
         <nav
           className={`py-4 px-10 h-auto backdrop-blur-md bg-slate-50 bg-opacity-90 shadow-lg`}
         >
           <div className="flex justify-between items-center">
-            <div className="text-bg-gray-900 font-bold text-3xl">
+            <div className="text-bg-gray-900 font-bold text-3xl select-none">
               <Link href={"/"} className="flex items-center">
-                <Image src={Logo} alt="Core Carbon Logo" height={50} width={50} />
+                <Image
+                  src={Logo}
+                  alt="Core Carbon Logo"
+                  height={50}
+                  width={50}
+                />
                 <span className="-mb-4">oreCarbon</span>
               </Link>
             </div>
@@ -121,7 +88,20 @@ export default function Navbar() {
                           key={index}
                           className="px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                         >
-                          {item}
+                          {typeof item === "object" ? (
+                            <Link
+                              href={`/services/${item.path}`}
+                              className={`${
+                                pathname === `/services/${item.path}`
+                                  ? "text-[#009f7f]"
+                                  : ""
+                              }`}
+                            >
+                              {item.title}
+                            </Link>
+                          ) : (
+                            <Link href={`/`}>{item}</Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -143,42 +123,46 @@ export default function Navbar() {
                           key={index}
                           className="px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
                         >
-                          {item}
+                          {typeof item === "object" ? (
+                            <Link
+                              href={`/sectors/${item.path}`}
+                              className={`${
+                                pathname === `/sectors/${item.path}`
+                                  ? "text-[#009f7f]"
+                                  : ""
+                              }`}
+                            >
+                              {item.title}
+                            </Link>
+                          ) : (
+                            <Link href={"/"}>{item}</Link>
+                          )}
                         </li>
                       ))}
                     </ul>
                   </div>
-                </li>
-                <li className="hover:text-[#009f7f] duration-200 select-none">
-                  <Link href={"/projects"} className={`${pathname === "/projects" ? "text-[#009f7f]" : ""}`}>Projects</Link>
-                </li>
-                <li className="hover:text-[#009f7f] duration-200 select-none">
-                  <Link href={"/resources"} className={`${pathname === "/resources" ? "text-[#009f7f]" : ""}`}>Resources</Link>
                 </li>
                 <li className="group relative cursor-pointer select-none">
                   <div className="flex gap-x-1 items-center hover:text-[#009f7f]">
-                    <Link href={"/about"} className={`${pathname === "/about" ? "text-[#009f7f]" : ""}`}>About</Link>
-                    {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" /> */}
-                  </div>
-                  {/* <div className="sm:min-w-0 absolute left-3/4">
-                    <ul
-                      className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-48 overflow-hidden 
-                   duration-500 bg-slate-50 text-xs sm:text-base font-normal rounded-md
-                   group-hover:shadow-md px-1 group-hover:border border-transparent group-hover:border-slate-200 cursor-pointer"
+                    <Link
+                      href={"/about"}
+                      className={`${
+                        pathname === "/about" ? "text-[#009f7f]" : ""
+                      }`}
                     >
-                      {navigationList[4].dropdownList?.map((item, index) => (
-                        <li
-                          key={index}
-                          className="px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div> */}
+                      About
+                    </Link>
+                  </div>
                 </li>
                 <li className="hover:text-[#009f7f] duration-200 select-none">
-                  <Link href={"/contact"} className={`${pathname === "/contact" ? "text-[#009f7f]" : ""}`}>Contact us</Link>
+                  <Link
+                    href={"/contact"}
+                    className={`${
+                      pathname === "/contact" ? "text-[#009f7f]" : ""
+                    }`}
+                  >
+                    Contact us
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -188,6 +172,6 @@ export default function Navbar() {
           <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarToggle} />
         </nav>
       </header>
-    </>
+    </Wrapper>
   );
 }

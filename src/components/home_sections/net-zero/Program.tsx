@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Card from "../sector-section/Card";
+import Card from "../../reusable/Card";
 
 import Carbon from "public/images/service-icons/carbon.png";
 import Plastic from "public/images/service-icons/plastic.png";

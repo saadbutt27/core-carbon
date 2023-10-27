@@ -26,13 +26,13 @@ export default function ProfileCard({
         <h3 className="text-lg font-semibold  mt-3">{title}</h3>
         {text && <p className=" text-sm mb-3">{text}</p>}
       </div>
-      <Link
+      {/* <Link
         href={""}
         className="flex items-center justify-start gap-x-1.5 text-sm group-hover:text-[#009f7f] duration-300"
       >
         Read more{" "}
         <ChevronRightCircleIcon className="group-hover:translate-x-1 group-hover:text-[#009f7f] duration-300 w-5 h-5 text-gray-400" />
-      </Link>
+      </Link> */}
     </div>
   );
 }

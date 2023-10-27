@@ -9,7 +9,7 @@ export default function TestimonialCarousel() {
       remarks:
         "I deeply appreciate the climate firm's creativity and professionalism in the consulting task they completed for me. Their straightforward and timely delivery of results highlighted their commitment to addressing climate issues. It was a pleasure working with them, and I look forward to future collaborations.",
       position: "Chief Executive",
-      companyName: "National Project Managers Pvt. Ltd, Dubaiw",
+      companyName: "National Project Managers Pvt. Ltd, Dubai",
     },
     {
       remarks:
