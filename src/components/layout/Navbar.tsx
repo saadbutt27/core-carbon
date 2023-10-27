@@ -42,8 +42,8 @@ export default function Navbar() {
   };
 
   return (
-    <Wrapper>
-      <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50">
+      <Wrapper>
         <nav
           className={`py-4 px-10 h-auto backdrop-blur-md bg-slate-50 bg-opacity-90 shadow-lg`}
         >
@@ -171,7 +171,7 @@ export default function Navbar() {
           {/* Sidebar for small screens */}
           <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarToggle} />
         </nav>
-      </header>
-    </Wrapper>
+      </Wrapper>
+    </header>
   );
 }

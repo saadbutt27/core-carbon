@@ -69,11 +69,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                               ? "text-[#009f7f]"
                               : ""
                           }`}
+                          onClick={handleLinkClick}
                         >
                           {item.title}
                         </Link>
                       ) : (
-                        <Link href={`/`}>{item}</Link>
+                        <Link href={`/`} onClick={handleLinkClick}>
+                          {item}
+                        </Link>
                       )}
                     </li>
                   ))}
@@ -103,27 +106,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                               ? "text-[#009f7f]"
                               : ""
                           }`}
+                          onClick={handleLinkClick}
                         >
                           {item.title}
                         </Link>
                       ) : (
-                        <Link href={`/`}>{item}</Link>
+                        <Link href={`/`} onClick={handleLinkClick}>
+                          {item}
+                        </Link>
                       )}
                     </li>
                   ))}
                 </ul>
               </div>
-            </li>
-            <li className="hover:text-[#009f7f] duration-200 select-none">
-              <Link
-                href={"/resources"}
-                className={`${
-                  pathname === "/resources" ? "text-[#009f7f]" : ""
-                }`}
-                onClick={handleLinkClick}
-              >
-                Resources
-              </Link>
             </li>
             <li className="group cursor-pointer select-none">
               <div className="flex gap-x-1 justify-center items-center hover:text-[#009f7f]">
@@ -134,23 +129,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 >
                   About
                 </Link>
-                {/* <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" /> */}
               </div>
-              {/* <div className="sm:min-w-0">
-                <ul
-                  className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-64 md:w-80 overflow-hidden 
-                       duration-500 bg-slate-50 font-normal rounded-md px-1 cursor-pointer"
-                >
-                  {navigationList[4].dropdownList?.map((item, index) => (
-                    <li
-                      key={index}
-                      className="text-center text-sm px-1 py-2 shrink-0 hover:text-[#009f7f] duration-200"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
             </li>
             <li className="hover:text-[#009f7f] duration-200 select-none">
               <Link href={"/contact"} onClick={handleLinkClick}>
