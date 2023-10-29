@@ -1,5 +1,5 @@
 import React from "react";
-import TetimonaialBG from "public/images/tetimonial_image.webp";
+import TetimonaialBG from "public/images/hero_images/tetimonial_image.webp";
 import Title from "@/components/reusable/Title";
 import Link from "next/link";
 import { LinkedinIcon } from "lucide-react";
@@ -7,6 +7,11 @@ import { MailIcon } from "lucide-react";
 import { TwitterIcon } from "lucide-react";
 import { YoutubeIcon } from "lucide-react";
 import Wrapper from "@/components/reusable/Wrapper";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 export default function Contact() {
   return (

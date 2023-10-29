@@ -16,11 +16,15 @@ export const navigationList = [
       },
       {
         title: "Planning",
-        path: "panning",
+        path: "planning",
       },
       {
         title: "Digital",
         path: "digital",
+      },
+      {
+        title: "Geospatial Analysis",
+        path: "geospatial_analysis",
       },
     ],
   },

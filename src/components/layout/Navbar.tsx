@@ -77,7 +77,7 @@ export default function Navbar() {
                     </Link>
                     <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" />
                   </div>
-                  <div className="sm:min-w-0 absolute left-3/4">
+                  <div className="sm:min-w-0 absolute left-1/2">
                     <ul
                       className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-52 overflow-hidden 
                    duration-500 bg-slate-50 text-xs sm:text-base font-normal rounded-md
@@ -112,7 +112,7 @@ export default function Navbar() {
                     <Link href={"#"}>Sectors</Link>
                     <ChevronDown className="w-4 h-4 mt-1 hover:text-[#009f7f]" />
                   </div>
-                  <div className="sm:min-w-0 absolute left-3/4">
+                  <div className="sm:min-w-0 absolute left-1/2">
                     <ul
                       className="flex flex-col group-hover:max-h-max group-hover:py-2 max-h-0 w-64 overflow-hidden 
                    duration-500 bg-slate-50 text-xs sm:text-base font-normal rounded-md

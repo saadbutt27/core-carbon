@@ -1,5 +1,5 @@
 import React from "react";
-import TetimonaialBG from "public/images/tetimonial_image.webp";
+import TetimonaialBG from "public/images/hero_images/tetimonial_image.webp";
 import { QuoteIcon } from "lucide-react";
 import TestimonialCarousel from "./TestimonialCarousel";
 

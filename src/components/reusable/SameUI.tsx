@@ -1,11 +1,11 @@
 import React from "react";
 import Card from "@/components/reusable/Card";
-import SS1 from "public/images/service-icons/ss2.png";
 import { type StaticImageData } from "next/image";
+import clsx from "clsx";
 
 interface Card {
   title: string;
-  text: string;
+  text?: string;
   imgSrc: StaticImageData;
 }
 
@@ -30,8 +30,11 @@ export default function SameUI({ index, title, text1, text2, cards }: UIProps) {
             {text2}
           </p>
         </div>
-        {/* <div className="hidden md:block h-screen w-2 bg-gray-950"></div> */}
-        <div className="/">
+        <div
+          className={clsx("grid grid-cols-1", {
+            "sm:grid-cols-2 gap-6": cards.length > 2,
+          })}
+        >
           {cards.map((card, index) => (
             <Card
               key={index}

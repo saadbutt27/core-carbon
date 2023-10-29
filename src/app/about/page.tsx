@@ -1,8 +1,13 @@
 import React from "react";
-import TetimonaialBG from "public/images/tetimonial_image.webp";
+import TetimonaialBG from "public/images/hero_images/tetimonial_image.webp";
 import Title from "@/components/reusable/Title";
 import Team from "./components/Team";
 import Wrapper from "@/components/reusable/Wrapper";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About us",
+};
 
 export default function About() {
   return (

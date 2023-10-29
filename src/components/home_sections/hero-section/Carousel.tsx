@@ -1,9 +1,9 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import Image1 from "public/images/climate_change.avif";
-import Image2 from "public/images/climate_change_2.avif";
-import Image3 from "public/images/climate_change_4.avif";
+import Image1 from "public/images/hero_images/climate_change.avif";
+import Image2 from "public/images/hero_images/climate_change_2.avif";
+import Image3 from "public/images/hero_images/climate_change_4.avif";
 import Hero from "./Hero";
 
 export default function CarouselHero() {

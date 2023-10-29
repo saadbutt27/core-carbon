@@ -2,7 +2,6 @@ import React from "react";
 import Card from "../../reusable/Card";
 import EnergyImage from "public/images/service-icons/energy.png";
 import ClimateChangeImage from "public/images/service-icons/climate-change.png";
-// import ClimateChangeImage from "public/images/service-icons/climate-change-2.png";
 import WaterImage from "public/images/service-icons/water.png";
 import ForestryImage from "public/images/service-icons/forestry.png";
 import AggricultureImage from "public/images/service-icons/aggriculture.png";
