@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import Card from "../../reusable/Card";
-
 import Carbon from "public/images/service-icons/carbon.png";
 import Plastic from "public/images/service-icons/plastic.png";
 import Stratergy from "public/images/service-icons/stratergy.png";
@@ -13,20 +12,24 @@ export default function Program() {
       imagesrc: Carbon,
       title: "Carbon Credits",
       text: "We collaborate to shift from fossil fuels to sustainable energy sources like wind and solar, minimizing dependency.",
+      path: "/services/advisory_services",
     },
     {
       imagesrc: Plastic,
       title: "Plastic Credits",
       text: "We assist in understanding climate change impacts on your business and preparing for the future.",
+      path: "/services/advisory_services",
     },
     {
       imagesrc: Stratergy,
       title: "Stratergy and Insights",
       text: "We aid in efficient water usage through innovative solutions that conserve and reduce wastage.",
+      path: "/services/advisory_services",
     },
     {
       imagesrc: ForestryImage,
       title: "Program Managemnet",
+      path: "/services/advisory_services",
     },
   ];
   return (
@@ -49,12 +52,14 @@ export default function Program() {
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {cardDetails.map((card) => (
-            <Card
-              key={card.imagesrc.src}
-              imageSrc={card.imagesrc}
-              title={card.title}
-            />
+          {cardDetails.map((card, index) => (
+            <Link href={card.path} key={card.path + index}>
+              <Card
+                key={card.imagesrc.src}
+                imageSrc={card.imagesrc}
+                title={card.title}
+              />
+            </Link>
           ))}
         </div>
       </div>
