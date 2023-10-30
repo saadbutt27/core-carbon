@@ -6,46 +6,7 @@ import { YoutubeIcon } from "lucide-react";
 import Image from "next/image";
 import Logo from "public/logo1.png";
 import Wrapper from "../reusable/Wrapper";
-
-const navigationList = [
-  {
-    listTitle: "Services",
-    dropdownList: [
-      "Advisory Services",
-      "Asset Management",
-      "Audit",
-      "Planning",
-      "Digital",
-    ],
-  },
-  {
-    listTitle: "Sectors",
-    dropdownList: [
-      "Energy",
-      "Water and Waste Water",
-      "Forsetry and Biodiversity",
-      "Agriculture",
-      "Capacity Development",
-      "Carbon",
-      "Plastic",
-      "The Blue Economy",
-      "Fashion and Textile",
-    ],
-  },
-  {
-    listTitle: "Projects",
-  },
-  {
-    listTitle: "Resources",
-  },
-  {
-    listTitle: "About",
-    dropdownList: ["Profile", "Team", "Events and News", "Careers"],
-  },
-  {
-    listTitle: "Contact us",
-  },
-];
+import { navigationList } from "@/lib/navList";
 
 export default function Footer() {
   return (
@@ -68,7 +29,11 @@ export default function Footer() {
                   key={index}
                   className="text-base ml-5 mb-2 hover:underline duration-300"
                 >
-                  <Link href={"#"}>{item}</Link>
+                  {typeof item === "object" ? (
+                    <Link href={`/services/${item.path}`}>{item.title}</Link>
+                  ) : (
+                    <Link href={`/`}>{item}</Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -83,7 +48,11 @@ export default function Footer() {
                   key={index}
                   className="text-base ml-5 mb-2 hover:underline duration-300"
                 >
-                  <Link href={"#"}>{item}</Link>
+                  {typeof item === "object" ? (
+                    <Link href={`/sectors/${item.path}`}>{item.title}</Link>
+                  ) : (
+                    <Link href={`/`}>{item}</Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -113,16 +82,16 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
               <ul>
                 <li className="text-base ml-5 mb-2 hover:underline duration-300">
-                  <Link href={"#"}>About</Link>
+                  <Link href={"/about"}>About</Link>
                 </li>
                 <li className="text-base ml-5 mb-2 hover:underline duration-300">
-                  <Link href={"#"}>Projects</Link>
+                  <Link href={"/"}>Projects</Link>
                 </li>
                 <li className="text-base ml-5 mb-2 hover:underline duration-300">
-                  <Link href={"#"}>Events & News</Link>
+                  <Link href={"/"}>Events & News</Link>
                 </li>
                 <li className="text-base ml-5 mb-2 hover:underline duration-300">
-                  <Link href={"#"}>Careers</Link>
+                  <Link href={"/"}>Careers</Link>
                 </li>
               </ul>
             </div>

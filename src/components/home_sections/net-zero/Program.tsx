@@ -42,7 +42,7 @@ export default function Program() {
             replaced by elimination of carbon by sustainable practices or
             exchange is challenging. We&apos;re here to help.
           </p>
-          <Link href={"/"}>
+          <Link href={"/services/advisory_services"}>
             <button className="bg-gray-900 text-slate-50 text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide hover:scale-105 duration-300">
               Learn more about our programs
             </button>

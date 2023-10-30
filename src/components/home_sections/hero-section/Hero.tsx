@@ -84,7 +84,7 @@ export default function Hero({
         <motion.p variants={child} className="text-xl text-slate-50 font-bold tracking-wider">
           Stay ahead of it.
         </motion.p>
-        <Link href={"/"} className="group">
+        <Link href={"/about"} className="group">
           <motion.button
             variants={child}
             className="bg-gray-950 text-slate-50 text-sm sm:text-base px-4 py-3 sm:px-6 sm:py-4 font-semibold tracking-wide group-hover:scale-110 duration-300"
